@@ -1,16 +1,45 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Rubik;
+    font-weight: 300;
+    src: local(''), url(/fonts/Rubik-Light.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 400;
+    src: local(''), url(/fonts/Rubik-Regular.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 500;
+    src: local(''), url(/fonts/Rubik-Medium.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 600;
+    src: local(''), url(/fonts/Rubik-SemiBold.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 700;
+    src: local(''), url(/fonts/Rubik-Bold.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 800;
+    src: local(''), url(/fonts/Rubik-ExtraBold.ttf) format("truetype")
+  }
+  @font-face {
+    font-family: Rubik;
+    font-weight: 900;
+    src: local(''), url(/fonts/Rubik-Black.ttf) format("truetype")
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
