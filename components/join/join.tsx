@@ -1,21 +1,26 @@
+import MobileStoreButton from "../misc/mobile_button"
+
+
 const Join = () => {
     return <>
         <div className="space-y-12">
             <div className="grid grid-cols-1 place-items-center gap-4">
                 <h2 className="text-4xl font-bold text-txt-300">
-                    Ready to Begin Building Your Team? Register Now!
+                    Ready to Begin Building Your Team? <a href="https://teams.crosschecksports.com" target="_blank" className="underline text-primary hover:opacity-50 transition-opacity">Register Now!</a>
                 </h2>
-                <div className="grid grid-cols-2 gap-4">
-                    <a href="https://teams.crosschecksports.com">
-                        <div className="grid place-items-center rounded-full border-primary border-2 hover:opacity-50 px-4 py-2">
-                            Login
-                        </div>
-                    </a>
-                    <a href="https://teams.crosschecksports.com">
-                        <div className="grid place-items-center rounded-full bg-primary hover:opacity-50 px-4 py-2">
-                            Create Account
-                        </div>
-                    </a>
+                <div className="grid gris-cols-1 sm:grid-cols-2 gap-4 place-items-center">
+                    <MobileStoreButton props={{
+                        store: "ios",
+                        url: "https://apps.apple.com/pk/app/crosscheck-hockey/id1585600361",
+                        height: 67,
+                        width: undefined
+                    }} />
+                    <MobileStoreButton props={{
+                        store: "android",
+                        url: "https://play.google.com/store/apps/details?id=com.landersweb.pnflutter",
+                        height: 100,
+                        width: undefined,
+                    }} />
                 </div>
             </div>
             <div className="grid grid-cols-1 place-items-center gap-4">

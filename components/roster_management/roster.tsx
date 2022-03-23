@@ -47,7 +47,7 @@ const Roster = () => {
         <Content props={{
             title: "Explicate Roster Control",
             description: <>
-                The powerful <span className="text-primary">roster engine</span> allows portable rosters between your <span className="text-primary">seasons</span> and <span className="text-primary">games</span>. Select and choose from a team roster to design your season and game rosters.
+                The powerful roster engine allows portable rosters between your seasons and games. Select and choose from a team roster to design your season and game rosters.
             </>,
             content: <div className="lg:flex lg:space-x-10 items-center justify-between space-y-4 lg:space-y-0">
                 <div className={`${showTeam ? "opacity-100" : "opacity-0"} grow transition-opacity duration-1000`}>

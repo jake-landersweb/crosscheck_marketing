@@ -36,9 +36,8 @@ const Initial = () => {
         <div className="lg:flex items-center justify-between space-y-8 lg:space-y-0">
             <div className="lg:flex place-items-center">
                 <h2 className="text-5xl font-semibold">
-                    We give you the tools needed for your sports team to succeed
+                    The ultamite lightweight sports team management app
                 </h2>
-                {/* <div className="w-full"></div> */}
             </div>
             <div className="grid place-items-center">
                 <div className="hidden md:flex container relative">
