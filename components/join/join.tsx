@@ -6,7 +6,7 @@ const Join = () => {
         <div className="space-y-12">
             <div className="grid grid-cols-1 place-items-center gap-4">
                 <h2 className="text-4xl font-bold text-txt-300">
-                    Ready to Begin Building Your Team? <a href="https://teams.crosschecksports.com" target="_blank" className="underline text-primary hover:opacity-50 transition-opacity">Register Now!</a>
+                    Ready to Begin Building Your Team? <a href="https://teams.crosschecksports.com" target="_blank" rel="noreferrer" className="underline text-primary hover:opacity-50 transition-opacity">Register Now!</a>
                 </h2>
                 <div className="grid gris-cols-1 sm:grid-cols-2 gap-4 place-items-center">
                     <MobileStoreButton props={{
@@ -28,7 +28,7 @@ const Join = () => {
                     Looking for a More Custom Solution?
                 </h2>
                 <h3 className="text-lg font-medium">
-                    <a href="https://landersweb.com" target="_blank" className="underline hover:opacity-50">Talk with our team</a> about building out a custom website and app for your team extending the Crosscheck Sports team engine.
+                    <a href="https://landersweb.com" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Talk with our team</a> about building out a custom website and app for your team extending the Crosscheck Sports team engine.
                 </h3>
             </div>
         </div>

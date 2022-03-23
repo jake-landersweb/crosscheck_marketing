@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </div>
         <div className="bg-bgdk-800 p-8 w-full grid place-items-center">
-          <span>Powered by <a href="https://landersweb.com" target="_blank" className="underline hover:opacity-50">Landersweb</a></span>
+          <span>Powered by <a href="https://landersweb.com" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Landersweb</a></span>
         </div>
       </div>
     </div>
