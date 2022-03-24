@@ -1,4 +1,5 @@
 import Content from "../misc/content"
+import ImageWrapper from "../misc/image"
 
 const Chat = () => {
     return <>
@@ -6,9 +7,10 @@ const Chat = () => {
             title: "In-App Chat",
             description: <>A built in localized chat service in app allows your team to stay connected from season to season. </>,
             content: <>
-                <div className="w-[300px]">
-                    <img src="/assets/chat.png" />
-                </div>
+                <ImageWrapper props={{
+                    url: '/assets/chat.png',
+                    alt: "iOS chat page"
+                }} />
             </>,
             reverse: true
         }} />

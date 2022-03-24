@@ -31,13 +31,17 @@ const Header = () => {
 
     return (
         <div className={`${scrollY > 50 ? "bg-bgdk-800 shadow-md p-2" : "bg-bgdk-900 p-4 bg-opacity-50 backdrop-blur-sm"} items-center w-screen grid place-items-center transition-all duration-300`}>
-            <div className="flex space-x-4 items-center justify-between max-w-[1700px] w-full px-5 lg:px-20 md:px-10">
+            <div className="flex space-x-4 items-center justify-between max-w-[1700px] w-full px-0 lg:px-20 md:px-10">
                 <Link href="/">
                     <a onClick={(e) => closeMenu()}>
                         <div className="group flex space-x-2 items-center transition-all">
-                            <img src="/assets/xcheck_blue.svg" height={`${scrollY > 50 ? "50px" : "75px"}`} width={`${scrollY > 50 ? "50px" : "75px"}`} className="transition-all duration-300 group-hover:opacity-50" />
-                            <h1 className={`${scrollY > 50 ? "text-xl" : "text-3xl"} font-bold transition-all duration-300 group-hover:text-txt-400`}>
-                                Crosscheck Sports
+                            <div className={`transition-all duration-300 ${scrollY > 50 ? "w-[30px] h-[30px] sm:w-[50px] sm:h-[50px]" : "w-[50px] h-[50px] sm:w-[75px] sm:h-[75px]"}`}>
+                                <img src="/assets/xcheck_blue.svg" className="transition-all duration-300 group-hover:opacity-50" />
+                            </div>
+                            <h1 className={`${scrollY > 50 ? "text-xl" : "text-2xl sm:text-3xl"} font-bold transition-all duration-300 group-hover:text-txt-400`}>
+                                <div className="flex">
+                                    Crosscheck <span className='hidden sm:flex'>&nbsp;Sports</span>
+                                </div>
                             </h1>
                         </div>
                     </a>
@@ -70,7 +74,7 @@ const Header = () => {
             {/* mobile menu */}
             <div className={`menu ${isOpen ? "max-h-screen" : "max-h-0 opacity-0 disabled-full"} space-y-2 transition-all duration-700 ease-in-out`}>
                 <div className="">
-                    <Link href="/articles">
+                    <Link href="#Join">
                         <a onClick={(e) => closeMenu()}>
                             <div className="group flex space-x-2 items-center transition-all">
                                 <h2 className={`text-2xl font-bold text-txt-400 group-hover:text-txt transition-all duration-300`}>
