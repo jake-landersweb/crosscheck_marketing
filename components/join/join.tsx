@@ -6,7 +6,7 @@ const Join = () => {
         <div className="space-y-12">
             <div className="grid grid-cols-1 place-items-center gap-4">
                 <h2 className="text-4xl font-bold text-txt-300">
-                    Ready to Begin Building Your Team? <a href="https://teams.crosschecksports.com" target="_blank" rel="noreferrer" className="underline text-primary hover:opacity-50 transition-opacity">Register Now!</a>
+                    Ready to Begin Building Your Team? <a href="https://teams.crosschecksports.com/Account/Register" target="_blank" rel="noreferrer" className="underline text-primary hover:opacity-50 transition-opacity">Register Now!</a>
                 </h2>
                 <div className="grid gris-cols-1 sm:grid-cols-2 gap-4 place-items-center">
                     <MobileStoreButton props={{

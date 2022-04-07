@@ -2,8 +2,31 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Header from '../components/header'
 import Head from 'next/head'
+import * as env from '../components/analytics/.env.js'
+import { useRouter } from 'next/router'
+import * as ga from '../components/analytics/analytics'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
+  useEffect(() => {
+    // some browsers (like safari) may require a timeout to delay calling this
+    // function after a page has loaded; otherwise, it may not update the position
+    window.scrollTo(0, 0);
+    console.log(router);
+
+    // log google analytics
+    const handleRouteChange = (url: string) => {
+      ga.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events]);
+
   return <>
     <Head>
       <title>Crosscheck Sports</title>
@@ -14,6 +37,21 @@ function MyApp({ Component, pageProps }: AppProps) {
       <meta property="og:title" content="Crosscheck Sports" />
       <meta property="og:description" content="A fully customizable team management engine. Create teams, seasons, events, games and more. Along with chat and stat tracking, Crosscheck Sports allows you to create a powerful environment for your team members to interact with the schedule and each other" />
       <meta property="og:site_name" content="Crosscheck Sports" />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${env.GOOGLEALAYTICS}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${env.GOOGLEALAYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }} />
     </Head>
     <div className="text-txt bg-bgdk-900">
       <div className="grid place-items-center">
