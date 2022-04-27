@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="fixed top-0 z-50">
           <Header />
         </div>
-        <div className="relative min-h-screen max-w-[1500px] w-full py-[120px] px-5 lg:px-20 md:px-10">
+        <div className="relative max-w-[1500px] w-full py-[120px] px-5 lg:px-20 md:px-10">
           <Component {...pageProps} />
         </div>
         <div className="bg-bgdk-800 p-8 w-full grid place-items-center">

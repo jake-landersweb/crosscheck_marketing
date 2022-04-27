@@ -1,6 +1,6 @@
 const imageLinks = {
-    ios: '/assets/app_store.svg',
-    android: '/assets/play_store.svg',
+    ios: '/svg/app_store_dark.svg',
+    android: '/svg/play_store.svg',
 };
 
 type MobileStoreButtonProps = {
@@ -18,7 +18,7 @@ const MobileStoreButton = ({ props }: { props: MobileStoreButtonProps }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <img src={`${imageLinks[props.store as keyof typeof imageLinks]}`} height={`${props.height ?? 60}px`} width={`${props.width ?? 180}px`} />
+            <img src={`${imageLinks[props.store as keyof typeof imageLinks]}`} className="max-h-[60px]" />
         </a>
     );
 }

@@ -10,12 +10,9 @@ const CheckIn = () => {
             </>,
             content: <div className="md:flex md:space-x-8">
                 <ImageWrapper props={{
-                    url: '/assets/checkin.png',
-                    alt: "iOS checkin model"
-                }} />
-                <ImageWrapper props={{
-                    url: '/assets/statuses.png',
-                    alt: "iOS available statuses"
+                    url: "/assets/checkin.png",
+                    alt: "Crosscheck Sports custom fields and logo customization",
+                    className: "xs:max-h-[650px]"
                 }} />
             </div>,
             reverse: true

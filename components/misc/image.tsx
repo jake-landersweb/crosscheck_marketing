@@ -5,7 +5,7 @@ type ImageWrapperProps = {
 }
 
 const ImageWrapper = ({ props }: { props: ImageWrapperProps }) => {
-    return <div className={`${props.className ?? ""} xs:w-[300px] w-[250px]`}>
+    return <div className={`${props.className ?? ""}`}>
         <img src={props.url} alt={props.alt} />
     </div>
 }

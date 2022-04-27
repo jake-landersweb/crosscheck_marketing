@@ -11,7 +11,8 @@ const Stats = () => {
             content:
                 <ImageWrapper props={{
                     url: '/assets/stats.png',
-                    alt: "iOS stat page"
+                    alt: "iOS stat page",
+                    className: "xs:max-w-[350px]"
                 }} />,
             reverse: false
         }} />

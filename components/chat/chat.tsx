@@ -9,7 +9,8 @@ const Chat = () => {
             content: <>
                 <ImageWrapper props={{
                     url: '/assets/chat.png',
-                    alt: "iOS chat page"
+                    alt: "iOS chat page",
+                    className: "xs:max-w-[350px]"
                 }} />
             </>,
             reverse: true

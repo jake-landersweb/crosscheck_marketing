@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import AppButtons from './misc/app_buttons';
 import ImageWrapper from './misc/image';
+import ProductItem from './misc/product_item';
 // import Pagination from 'docs/src/modules/components/Pagination';
 
 // const styles = {
@@ -32,38 +34,20 @@ const Initial = () => {
     }
 
     return <>
-        <div className="lg:flex items-center justify-between space-y-8 lg:space-y-0">
-            <div className="lg:flex place-items-center">
-                <h2 className="text-4xl md:text-5xl font-semibold">
-                    The ultamite lightweight sports team management app
-                </h2>
-            </div>
-            <div className="grid place-items-center">
-                <div className="hidden md:flex container relative">
-                    <div className="flex space-x-[70px]">
-                        <ImageWrapper props={{
-                            url: '/assets/chat.png',
-                            alt: "iOS chat page",
-                            className: "scale-95"
-                        }} />
-                        <ImageWrapper props={{
-                            url: '/assets/detail.png',
-                            alt: "iOS detail page",
-                            className: "scale-95"
-                        }} />
-                    </div>
-                    <div className="absolute top-0 left-[185px]">
-                        <ImageWrapper props={{
-                            url: '/assets/schedule.png',
-                            alt: "iOS schedule"
-                        }} />
-                    </div>
+        <div className="lg:flex items-center justify-center">
+            <div className="lg:max-w-[50%]">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-white text-opacity-70">
+                    Your Customizable team management solution
+                </h1>
+                <div className="flex items-center justify-center p-4">
+                    <AppButtons />
                 </div>
             </div>
-            <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 place-items-center gap-4">
+            <div className="grid place-items-center">
                 <ImageWrapper props={{
-                    url: '/assets/schedule.png',
-                    alt: "iOS schedule"
+                    url: "/assets/xcheck_3.png",
+                    alt: "Crosscheck Sports App screenshots, schedule, chat, and event details",
+                    className: "xs:max-w-[650px]"
                 }} />
             </div>
         </div>
